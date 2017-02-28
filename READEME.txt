@@ -1,0 +1,3 @@
+Create a Product database that contains a list of products one might by in a store. These products should be assigned to a category.
+Using WEB API, create an API to manage these products (GET, POST and DELETE at minimum. PUT can be used). You should be able to add, delete and update products.
+Create a web frontend that drives the management of the products (Add, Update and Delete). The frontend should be able to filter the products shown by Category.
