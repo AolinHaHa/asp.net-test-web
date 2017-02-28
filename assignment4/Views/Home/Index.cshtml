@@ -1,0 +1,65 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+
+    <div style="float:left;"><img src="Content/Buzz_Tweed.jpg" height="159" width="200" /></div>
+    <div style="margin-left:5px;">
+        <h1>Assignment4</h1>
+        <p class="lead">A penny saved is a penny earned!</p>
+        <p><a href="http://en.wikipedia.org/wiki/saving" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        @if (this.User.Identity.IsAuthenticated == false)
+        {
+            <h2>Getting started</h2>
+                <p>
+                    Click to sign up
+                </p>
+                <p>
+                    <a class="btn btn-primary" href="/Account/Register">Register</a>
+                </p>
+        }
+        else
+        {
+            <h2>Post your product/project</h2>
+                <p>
+                    Thanks for being a member! Start post your product/project
+                </p>
+                <p>
+                    <a class="btn btn-default" href="/Product">Post</a>
+                </p>
+        }
+
+
+    </div>
+    <div class="col-md-4">
+        @if (this.User.Identity.IsAuthenticated == false)
+        {
+            <h2>Why post your project/product?</h2>
+                <p>
+                    Let more people working on your project!
+                </p>
+        }
+        else
+        {
+            <h2>View Latest Super Secret Info!</h2>
+                <p>
+                    We've got our latest report of trends going on in your area!
+                </p>
+                <p>
+                    <a class="btn btn-default" href="http://www.google.com">View Report</a>
+                </p>
+        }
+    </div>
+    <div class="col-md-4">
+        <h2>Friends help friends </h2>
+        <p>
+            The community will appreciate your project.
+        </p>
+    </div>
+</div>
